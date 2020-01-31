@@ -26,3 +26,10 @@ pipelineStages:
   skipCondition:
     type: DO_NOT_SKIP
   stageName: STAGE 3
+- type: ENV_STATE
+  name: prod_deploy
+  parallel: false
+  skipCondition:
+    type: DO_NOT_SKIP
+  stageName: STAGE 3
+  workflowName: To-Do List K8s Rolling-clone
