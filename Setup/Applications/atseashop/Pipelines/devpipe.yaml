@@ -7,7 +7,7 @@ pipelineStages:
   skipCondition:
     type: DO_NOT_SKIP
   stageName: STAGE 2
-  workflowName: To-Do List K8s Rolling-clone
+  workflowName: To-Do List K8s Canary-clone
 - type: APPROVAL
   name: Approval 1
   parallel: false
