@@ -1,0 +1,4 @@
+harnessApiVersion: '1.0'
+type: DOCKER
+imageName: pcjoshi9/atseashop_app
+serverName: DockerHUB
