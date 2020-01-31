@@ -1,15 +1,8 @@
 harnessApiVersion: '1.0'
 type: PIPELINE
 pipelineStages:
-- type: ENV_STATE
-  name: dev_deploy
-  parallel: false
-  skipCondition:
-    type: DO_NOT_SKIP
-  stageName: STAGE 2
-  workflowName: To-Do List K8s Canary-clone
 - type: APPROVAL
-  name: Approval 1
+  name: Approval 0
   parallel: false
   properties:
     userGroups:
@@ -20,7 +13,7 @@ pipelineStages:
     disable: false
     timeoutMillis: 604800000
     disableAssertion: null
-    pipelineStageParallelIndex: 2
+    pipelineStageParallelIndex: 1
     approvalStateType: USER_GROUP
     pipelineId: ZKkIkLymRRurOL5S-Y_VxQ
   skipCondition:
