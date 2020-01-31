@@ -1,0 +1,11 @@
+harnessApiVersion: '1.0'
+type: INFRA_DEFINITION
+cloudProviderType: KUBERNETES_CLUSTER
+deploymentType: KUBERNETES
+infrastructure:
+- type: DIRECT_KUBERNETES
+  cloudProviderName: kubernetes_cluster
+  namespace: account-hqfkli
+  releaseName: release-${infra.kubernetes.infraId}
+scopedServices:
+- atseashop_app
