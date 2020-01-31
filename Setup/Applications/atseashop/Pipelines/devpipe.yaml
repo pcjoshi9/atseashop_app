@@ -15,3 +15,20 @@ pipelineStages:
     type: DO_NOT_SKIP
   stageName: STAGE 2
   workflowName: To-Do List K8s Rolling-clone
+- type: APPROVAL
+  name: Approval 2
+  parallel: false
+  properties:
+    userGroups:
+    - J9ex18QpT4-ob9c8UnPymw
+    pipelineStageElementId: g_p26pGuS6evs58UgxzkMQ
+    stageName: STAGE 3
+    disable: false
+    timeoutMillis: 604800000
+    disableAssertion: null
+    pipelineStageParallelIndex: 3
+    approvalStateType: USER_GROUP
+    pipelineId: ZKkIkLymRRurOL5S-Y_VxQ
+  skipCondition:
+    type: DO_NOT_SKIP
+  stageName: STAGE 3
