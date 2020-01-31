@@ -4,7 +4,7 @@ cloudProviderType: KUBERNETES_CLUSTER
 deploymentType: KUBERNETES
 infrastructure:
 - type: DIRECT_KUBERNETES
-  cloudProviderName: Harness Sample K8s Cloud Provider
+  cloudProviderName: kubernetes_cluster
   namespace: account-hqfkli
   releaseName: release-${infra.kubernetes.infraId}
 scopedServices:
