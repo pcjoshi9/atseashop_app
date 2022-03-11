@@ -30,4 +30,4 @@ jobs:
         cd react-app
         npm install
         npm run build
-    - run: npm test
+        npm test
