@@ -2,6 +2,7 @@ FROM node:latest AS storefront
 WORKDIR /usr/src/atsea/app/react-app
 COPY react-app .
 RUN npm install
+RUN npm config get cache
 RUN npm run build
 
 FROM maven:latest AS appserver
