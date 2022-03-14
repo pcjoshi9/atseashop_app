@@ -10,8 +10,7 @@ on:
     branches: [ master ]
 
 jobs:
-  job1:
-     npmbuild:
+   npmbuild:
       runs-on: ubuntu-latest
       strategy:
         matrix:
@@ -29,15 +28,13 @@ jobs:
           npm install
           npm run build
           npm test
-   job2:
-      build:
+   build:
         runs-on: ubuntu-latest
         steps:
         - uses: actions/checkout@v2
         - name: Build the Docker image
           run: docker build . --file Dockerfile --tag latest atseashop_app:tagname:$(date +%s)
-   job3:
-      publish:
+   publish:
         runs-on: ubuntu-latest
         permissions:
           contents: read
@@ -85,5 +82,3 @@ jobs:
               push: ${{ github.event_name != 'pull_request' }}
               tags: ${{ steps.meta.outputs.tags }}
               labels: ${{ steps.meta.outputs.labels }}
-
-      
